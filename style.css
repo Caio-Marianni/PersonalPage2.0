@@ -410,7 +410,7 @@ section h5 {
     width: 100%;
   }
   section h5 {
-    font-size: 32px;
+    font-size: 28px;
     font-weight: bold;
     text-align: center;
     padding: 40pxjhg m;
@@ -448,4 +448,28 @@ section h5 {
   #contact {
     padding-bottom: 20vh;
   }
+  #home h2 {
+  font-size: 28px;
+  }
+  #home h1 {
+    font-size: 48px;
+  }
+  #home h3 {
+    font-size: 20px;
+  }
+  #portfolio .projects .cardProject h2 {
+    font-size: 20px;
+  }
+  #portfolio .projects .cardProject p {
+    font-size: 16px;
+  }
+  #contact .cardAbout h2 {
+    font-size: 28px;
+  }
+  #contact .cardAbout form .formItem label {
+    font-size: 20px;
+  }
+  #contact .cardAbout form .formItem .inputCamp input {
+    font-size: 16px;
+}
 }
