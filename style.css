@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 :root {
   /* --Color20 : #a444f3; */
   /* --Color20 : #3ecc3e; */
@@ -11,7 +12,7 @@
 }    
 body {
   overflow: hidden;
-  font-family: "cour", monospace;
+  font-family: "Montserrat", sans-serif;
 }
 canvas {
   position: fixed;
@@ -152,12 +153,15 @@ section{
   transition: all ease-in-out .5s;
 }
 /* Sections ------------------------------------- */
+section h5 {
+  visibility: hidden;
+}
 /* Home page------------------------------------- */
 #home {
   text-align: center; 
 }
 #home h2 {
-  font-size: 30px;
+  font-size: 32px;
   color: #ffffff8a;
 }
 #home h1 {
@@ -166,7 +170,7 @@ section{
   margin: 10px 0px;
 }
 #home h3 {
-  font-size: 25px;
+  font-size: 24px;
   color: #ffffff52;
 }
 /* About Me page--------------------------------- */
@@ -175,11 +179,12 @@ section{
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: 18px;
+  font-size: 16px;
 }
 #about .description p {
   margin-top: 15px;
   text-align: center;
+  font-size: 16px;
   color: #ffffffb0;
 }
 #about .description p a {
@@ -228,12 +233,12 @@ section{
   -webkit-backdrop-filter: blur(10px);
   border-radius: 10px;
   border: 1px solid #000000;
-  box-shadow: 0 4px 30px #0000001a;
   overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 #portfolio .projects .cardProject a p {
   position: absolute;
-  top: -10px;
+  top: -12px;
   left: -22px;
   display: flex;
   align-items: center;
@@ -251,14 +256,15 @@ section{
 #portfolio .projects .cardProject img {
   width: 100%;
   height: 250px;
+  object-fit: cover;
 }
 #portfolio .projects .cardProject h2 {
-  font-size: 30px;
+  font-size: 24px;
   margin: 10px 20px;
   color: #ffffff;
 }
 #portfolio .projects .cardProject p {
-  font-size: 18px;
+  font-size: 16px;
   margin: 3% 5%;
   color: #ffffff85;
 }
@@ -293,17 +299,16 @@ section{
   background: #ffffff1a;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 #contact .cardAbout h2 {
   display: flex; 
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  width: 300px;
-  font-size: 36px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 20px;
+  width: 260px;
+  font-size: 32px;
+  margin: 0 auto 50px auto;
   color: #ffffff;
   border-bottom: var(--Color20) solid 1px;
 }
@@ -321,13 +326,14 @@ section{
 }
 #contact .cardAbout form .formItem label {
   color: #bbbbbb;
-  font-size: large;
-  font-weight: normal;
+  font-size: 24px;
+  font-weight: lighter;
 }
 #contact .cardAbout form .formItem .inputCamp {
   width: 100%;
   height: auto;
-  margin-top: -10px;
+  margin-top: 10px;
+  padding-bottom: 10px;
 }
 #contact .cardAbout form .formItem .inputCamp input {
   font-size: 18px;
@@ -355,7 +361,6 @@ section{
   border: none;
   resize: none;
   outline: none;
-  margin-top: 20px;
   font-size: 18px;
   color: #9b9b9b;
   background-color: transparent;
@@ -368,11 +373,15 @@ section{
 #contact .cardAbout form .buttonSend input {
   width: 100px;
   height: 40px;
-  border-radius: 10px;
+  color: white;
+  border-radius: 5px;
+  border: solid 1px white;
+  background-color: transparent;
   transition: .5s;
 }
 #contact .cardAbout form .buttonSend input:hover {
-  background-color: var(--Color20);
+  color: var(--Color20);
+  border: solid 1px var(--Color20 );
   transition: ease-in-out .5s;
 }
 /* 
@@ -400,6 +409,14 @@ section{
     justify-content: center;
     width: 100%;
   }
+  section h5 {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    padding: 40pxjhg m;
+    visibility: visible;
+    color: #ffffff;
+  }
   /* Side Tag */
   /* OLHAR DE NOVO */
   .sideTag {
@@ -417,7 +434,18 @@ section{
   /* Sections */
   /* Home Page */
   #home {
-    height: 100vh;
+    height: 95vh;
   }
 
+  #about {
+    height: 95vh;
+  }
+  /* Portfolio Page */
+  #portfolio {
+    padding-bottom: 30vh;
+  }
+  /* Contact Page */
+  #contact {
+    padding-bottom: 20vh;
+  }
 }

@@ -1,13 +1,25 @@
 // BACKGROUND FLOW FIELD --------------------------------------------
 let particles = [];
 
-const num = 100;
+
+var widthDevice = window.innerWidth;
+var heightDevice = window.innerHeight;
+
+var num;
+
+if (widthDevice <= 1024) {
+  num = 40;
+} else if (widthDevice <= 1900) {
+  num = 80;
+} else {
+  num = 120;
+}
 
 const noiseScale = 0.01/2;
 
 function setup() {
-  createCanvas(window.innerWidth, window.innerHeight);
-  createCanvas(window.innerWidth, window.innerHeight);
+  createCanvas(widthDevice, heightDevice);
+
   for(let i = 0; i < num; i ++) {
     particles.push(createVector(random(width), random(height)));
   }
@@ -43,10 +55,3 @@ function onScreen(v) {
 function change() {
   document.getElementById('radio').checked = true;
 }
-//SCROLL TRANSLATE--------------------------------------------------
-// const scrollContainer = document.querySelector("main");
-
-// scrollContainer.addEventListener("wheel", (evt) => {
-//       evt.preventDefault();
-//       scrollContainer.scrollLeft += evt.deltaY;
-// });
